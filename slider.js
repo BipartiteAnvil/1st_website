@@ -1,18 +1,18 @@
+const images = document.querySelectorAll(".slider img")
 
-var slideIndex = 1;
-showDivs(slideIndex);
+const duration=5000;
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+let i=0;
+
+const size=images.length;
+images[i].style.opacity=1;
+
+function slide(mode)
+{
+    images[i].style.opacity=0;
+    i=(i+1)%size;
+    images[i].style.opacity=1;
+    
 }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
+setInterval(slide,duration);

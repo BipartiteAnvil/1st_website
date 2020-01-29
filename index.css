@@ -1,94 +1,103 @@
-body{
+body {
     margin: 0;
 }
-.root{
+
+.root {
     display: flex;
-    background-color: ;
     min-height: 100vh;
     flex-direction: column;
 
 }
-.header{
+
+.header {
     display: flex;
     position: fixed;
     width: 100%;
     background-color: #58595b;
     justify-content: space-between;
-    /* height: 50px; */
     color: white;
     align-items: center;
-   
+    z-index: 1;
+    transition: 2s;
 }
-.header .title{
+
+.header .title {
     color: white;
     font-weight: bold;
     font-size: 2rem;
     margin: 2rem;
 }
-.header a{
+
+.header a {
     text-decoration: none;
     color: white;
 }
-.navigation{
+
+.navigation {
     display: flex;
     background-color: green;
     justify-content: center;
 }
 
-button:hover{
+button:hover {
     background-color: red;
 }
-.Nav{
-    width:100%;
-    color: goldenrod;
-    height: 40px;
+
+.Nav {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
 }
-.Nav ul {
-    list-style-type:none;
-    position: absolute;
-    padding: 5px;
-    margin: 3px;
-}
-.Nav ul li{
-    float: left;
-    margin-top: 15px;
-    margin-bottpx;
-    
-}
-.Nav ul li a{
-    width:135px ;
+
+.Nav a {
     color: white;
     text-decoration: none;
-    font-size: 15px;
-    text-align: center;
-    padding: 16px;
-    border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 12px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
 }
-.Nav a:hover{
+
+.Nav a:hover {
     background: dodgerblue;
 
 }
-.Footer{
+
+.Footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: rgb(156, 149, 142);
 }
-.footer-1,.footer-2,.footer-3{
+
+.footer-1,
+.footer-2,
+.footer-3 {
     display: flex;
     flex-direction: column;
     border-bottom: 2px solid rgb(8, 8, 8);
     padding: 3px;
 }
 
-.slider{
-    width: 80%;
-    height: 700px;
-    max-width: 1000px;
-    user-select: none;
-    box box-shadow: 0px 0px 3px 1px #;
-
+.slider {
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    z-index: -1;
+    transition: 2s;
 }
 
+.slider img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 80vh;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+}
